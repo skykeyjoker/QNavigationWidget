@@ -1,9 +1,17 @@
+/****************************************************************
+ * @file QNavigationWidget.h
+ * @brief A implementation of tabbar.
+ ****************************************************************/
+
 #ifndef QNAVIGATIONTAB_H
 #define QNAVIGATIONTAB_H
 
 #include <QWidget>
 #include <QMouseEvent>
 
+/**
+ * @brief A implementation of tabbar.
+ */
 class QNavigationTab : public QWidget
 {
 	Q_OBJECT
@@ -37,6 +45,11 @@ private:
 	int currentIndex;
 
 signals:
+	/**
+	 * @brief The signal of item selection change.
+	 * 
+	 * @param index The index of the current item.
+	 */
 	void currentItemChange(const int index);
 };
 

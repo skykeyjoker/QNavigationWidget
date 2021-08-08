@@ -1,4 +1,10 @@
-﻿#ifndef QNAVIGATIONWIDGET_H
+﻿/****************************************************************
+ * @file QNavigationWidget.h
+ * @brief A completed implementation of QNavigationWidget.
+ ***************************************************************/
+
+
+#ifndef QNAVIGATIONWIDGET_H
 #define QNAVIGATIONWIDGET_H
 
 #include "QNavigationTab.h"
@@ -6,6 +12,9 @@
 #include <QStackedWidget>
 #include <QHBoxLayout>
 
+/**
+ * @brief A completed implementation of QNavigationWidget.
+ */
 class QNavigationWidget : public QWidget
 {
 	Q_OBJECT
@@ -28,17 +37,28 @@ public:
 
 private:
 	QHBoxLayout* mainLayout;
-	QStackedWidget* rightWidget;  // Shift the right widgets (Use StackedWidget)
-	QNavigationTab* navigationTab;
+	QStackedWidget* rightWidget;  ///< Shift the right widgets (Use StackedWidget)
+	QNavigationTab* navigationTab;  
 	
 	QWidget* currentWidget;
 	int currentIndex;
 
 private slots:
+
 	void changeTab(const int index);  // Shift the right widgets
 
 signals:
+/**
+ * @brief The signal of the tab change event.
+ * 
+ * @param index The index of the tab.
+ */
 	void currentIndexChanged(const int index);
+
+/**
+ * @brief The signal of the tab change event.
+ * 
+ */
 	void currentTabChanged();
 };
 
