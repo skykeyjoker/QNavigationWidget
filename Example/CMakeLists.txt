@@ -12,9 +12,9 @@ add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 project ("QNavigationWidgetTest")
 
 find_package(Qt5 COMPONENTS Core Gui Widgets)
-include_directories(../)
+include_directories(../Src)
 
-add_executable (QNavigationWidgetTest "../QNavigationWidget.cpp" "../QNavigationWidget.h" "main.cpp" "../QNavigationTab.h" "../QNavigationTab.cpp" "QNavigationWidgetTest.cpp" "QNavigationWidgetTest.h")
+add_executable (QNavigationWidgetTest "../Src/QNavigationWidget.cpp" "../Src/QNavigationWidget.h" "main.cpp" "../Src/QNavigationTab.h" "../Src/QNavigationTab.cpp" "QNavigationWidgetTest.cpp" "QNavigationWidgetTest.h")
 
 target_link_libraries(QNavigationWidgetTest Qt5::Widgets Qt5::Gui Qt5::Core)
 
